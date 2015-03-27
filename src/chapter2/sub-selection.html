@@ -21,12 +21,12 @@
 </section>
 
 <script type="text/javascript">
-    d3.select("#section1 > div") // <-- A
-            .attr("class", "blue box");
+    d3.select("#section1 > div") // child combinator. e.g. select div that is a child of an element with ID #section1. More restrictive than a descendent selector.
+            .attr("class", "blue box"); // assign an attribute of class .blue.box to the selection.
 
-    d3.select("#section2") // <-- B
-            .select("div") // <-- C
-            .attr("class", "red box");
+    d3.select("#section2") // select element with ID #section2
+            .select("div") // select div that is a descendent of element with ID #section2. This is a scoped selection equivalent to #section2 div.
+            .attr("class", "red box"); // add class attribute .red.box
 </script>
 
 </body>
